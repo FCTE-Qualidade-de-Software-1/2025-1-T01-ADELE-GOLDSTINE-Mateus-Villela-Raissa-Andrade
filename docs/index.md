@@ -56,6 +56,9 @@ Nossa equipe é composta por:
   </tr>
 </table>
 
+## Slides (Apresentação)
+[Acesse aos slides aqui](https://www.canva.com/design/DAGtFZ5hLEw/h6MD9__M3Nf7TJNwyWhSHw/edit?utm_content=DAGtFZ5hLEw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
 ## Tabela de Versionamento
 
 | Data       | Versão | Descrição                                 | Autor             |Revisor           | 
