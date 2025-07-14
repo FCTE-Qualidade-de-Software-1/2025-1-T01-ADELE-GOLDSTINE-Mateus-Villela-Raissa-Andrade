@@ -1,0 +1,2063 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Mateus Villela & Raissa Andrade">
+      
+      
+      
+        <link rel="prev" href="../estabelecimento/">
+      
+      
+        <link rel="next" href="../../Fase1/">
+      
+      
+      <link rel="icon" href="../../assets/imgs/agromart.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Etapa 2 - Planejamento da Medição - Qualidades de Software 1 - Villela & Andrade</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="#387F4A" data-md-color-accent="#F6C94A">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#planejamento-do-processo-de-medicao-etapa-2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Qualidades de Software 1 - Villela &amp; Andrade" class="md-header__button md-logo" aria-label="Qualidades de Software 1 - Villela & Andrade" data-md-component="logo">
+      
+  <img src="../../assets/imgs/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Qualidades de Software 1 - Villela & Andrade
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Etapa 2 - Planejamento da Medição
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="#387F4A" data-md-color-accent="#F6C94A"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="#A7D0AC" data-md-color-accent="#FFD873"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FCTE-Qualidade-de-Software-1/2025-1-T01-Mateus-Villela-Raissa-Andrade" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    2025-1-T01-Mateus-Villela-Raissa-Andrade
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Visão Geral
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../panorama-de-processo/" class="md-tabs__link">
+          
+  
+  
+  Gerência
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Fase1/" class="md-tabs__link">
+          
+  
+  
+  Fases do Projeto
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Qualidades de Software 1 - Villela &amp; Andrade" class="md-nav__button md-logo" aria-label="Qualidades de Software 1 - Villela & Andrade" data-md-component="logo">
+      
+  <img src="../../assets/imgs/logo.svg" alt="logo">
+
+    </a>
+    Qualidades de Software 1 - Villela & Andrade
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FCTE-Qualidade-de-Software-1/2025-1-T01-Mateus-Villela-Raissa-Andrade" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    2025-1-T01-Mateus-Villela-Raissa-Andrade
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visão Geral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Gerência
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Gerência
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../panorama-de-processo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Panorama do Processo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estabelecimento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Etapa 1 - Comprometimento com a Medição
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Etapa 2 - Planejamento da Medição
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Etapa 2 - Planejamento da Medição
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planejamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planejamento
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Planejamento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracterizacao-da-unidade-organizacional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caracterização da Unidade Organizacional
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identificacao-das-necessidades-informacionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identificação das Necessidades Informacionais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identificação das Necessidades Informacionais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tab1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela 1: Potenciais Necessidades Informacionais
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela 2: Priorização das Necessidades Informacionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecao-de-medidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seleção de Medidas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela 3: Necessidade Informacional 11 - Calendário e Progresso
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela 4: Necessidade Informacional 12 - Desempenho de Processo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela 5: Necessidade Informacional 9 - Recursos e Custos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definicao-dos-procedimentos-de-coleta-analise-e-reporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definição dos Procedimentos de Coleta, Análise e Reporte
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definição dos Procedimentos de Coleta, Análise e Reporte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-coleta-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Coleta de Dados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-armazenamento-e-verificacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Armazenamento e Verificação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-analise-dos-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Análise dos Dados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-reporte-e-comunicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Reporte e Comunicação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-configuracao-e-controle-dos-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Configuração e Controle dos Dados
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definicao-dos-criterios-de-avaliacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definição dos Critérios de Avaliação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definição dos Critérios de Avaliação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-avaliacao-dos-produtos-de-informacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Avaliação dos Produtos de Informação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-avaliacao-do-processo-de-medicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Avaliação do Processo de Medição
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificacao-e-validacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verificação e Validação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aquisicao-e-implementacao-de-tecnologias-de-suporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aquisição e Implementação de Tecnologias de Suporte
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ref-bib" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bibliografia
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementacao/preambulo.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Etapa 3 - Implementação da Medição
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../avaliacao.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Etapa 4 - Avaliação da Medição
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fases do Projeto
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fases do Projeto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fase1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fase2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fase3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fase4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planejamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planejamento
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Planejamento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracterizacao-da-unidade-organizacional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caracterização da Unidade Organizacional
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identificacao-das-necessidades-informacionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identificação das Necessidades Informacionais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identificação das Necessidades Informacionais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tab1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela 1: Potenciais Necessidades Informacionais
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela 2: Priorização das Necessidades Informacionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecao-de-medidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seleção de Medidas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela 3: Necessidade Informacional 11 - Calendário e Progresso
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela 4: Necessidade Informacional 12 - Desempenho de Processo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela 5: Necessidade Informacional 9 - Recursos e Custos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definicao-dos-procedimentos-de-coleta-analise-e-reporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definição dos Procedimentos de Coleta, Análise e Reporte
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definição dos Procedimentos de Coleta, Análise e Reporte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-coleta-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Coleta de Dados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-armazenamento-e-verificacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Armazenamento e Verificação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-analise-dos-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Análise dos Dados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-reporte-e-comunicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Reporte e Comunicação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-configuracao-e-controle-dos-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Configuração e Controle dos Dados
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definicao-dos-criterios-de-avaliacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definição dos Critérios de Avaliação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definição dos Critérios de Avaliação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-avaliacao-dos-produtos-de-informacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Avaliação dos Produtos de Informação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-avaliacao-do-processo-de-medicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Avaliação do Processo de Medição
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificacao-e-validacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verificação e Validação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aquisicao-e-implementacao-de-tecnologias-de-suporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aquisição e Implementação de Tecnologias de Suporte
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ref-bib" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bibliografia
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="planejamento-do-processo-de-medicao-etapa-2">Planejamento do Processo de Medição - Etapa 2</h1>
+<h2 id="introducao">Introdução</h2>
+<p>A etapa 5.2 da norma ISO/IEC 15939:2001 [<a href="#ref-bib">1</a>, p.12-15] trata da atividade de planejamento do processo de medição, essencial para garantir que as medições a serem realizadas sejam relevantes, estruturadas e alinhadas com as necessidades de informação da unidade organizacional. Esta atividade é central dentro do ciclo de melhoria contínua proposto pela norma e corresponde à fase de “Planejar” do modelo PDCA. Por meio do planejamento adequado, é possível selecionar medidas compatíveis com os objetivos do projeto, definir procedimentos sistemáticos de coleta e análise de dados e estabelecer critérios claros para avaliar os resultados. O modelo PSM/CID complementa esta abordagem ao fornecer uma estrutura prática para vincular artefatos, atividades e necessidades informacionais à produção de indicadores úteis à gestão.</p>
+<h2 id="objetivo">Objetivo</h2>
+<p>O objetivo deste documento é planejar o processo de medição no contexto do projeto, conforme especificado na etapa 5.2 da ISO/IEC 15939:2001 [<a href="#ref-bib">1</a>, p.12]. Pretende-se garantir que todas as decisões de medição — incluindo o que será medido, como será medido e por que será medido — estejam documentadas, justificadas e orientadas por necessidades reais de informação gerencial. O planejamento permitirá a geração de produtos informacionais confiáveis sobre calendário e progresso, desempenho de processo, recursos e custos, servindo como base para dashboards gerenciais.</p>
+<h2 id="planejamento">Planejamento</h2>
+<h3 id="caracterizacao-da-unidade-organizacional">Caracterização da Unidade Organizacional</h3>
+<p>A unidade organizacional envolvida corresponde à equipe responsável pelo desenvolvimento do projeto acadêmico supervisionado, composta por estudantes da disciplina de Qualidade de Software. Os processos executados incluem planejamento de tarefas, desenvolvimento técnico, acompanhamento de progresso e entrega de artefatos. A unidade opera sob metas pedagógicas, com cronograma previamente definido e critérios de avaliação estabelecidos.</p>
+<p><strong>[Caso existam mais informações sobre a estrutura da equipe, ferramentas utilizadas ou escopo dos processos, inserir aqui para complementar a caracterização.]</strong></p>
+<h3 id="identificacao-das-necessidades-informacionais">Identificação das Necessidades Informacionais</h3>
+<p>Com base no capítulo 5.2.2 da norma ISO/IEC 15939:2001 [<a href="#ref-bib">1</a>, p.13] e nos princípios descritos no PSM CID Measurement Framework, foram identificadas necessidades informacionais específicas que podem ser observadas diretamente a partir de artefatos e dados registrados na plataforma GitHub, como Issues, Pull Requests, Commits e afins. Para tal, as necessidades foram organizadas nas três categorias de informação de enfoque previamente definidas: <strong>calendário e progresso, desempenho de processo, e recursos e custos</strong>. Para cada categoria, como pode ser visto abaixo na <a href="#tab1">Tabela 1</a>, buscou-se elencar algumas das principais necessidades informacionais vinculadas à entidade <strong>Equipe</strong> ou, se pertinente, <strong>organização</strong>.</p>
+<h4 id="tab1">Tabela 1: Potenciais Necessidades Informacionais</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: center;">Objetivo</th>
+<th style="text-align: center;">Constantes</th>
+<th style="text-align: center;">Riscos</th>
+<th style="text-align: center;">Problemas Organizacionais</th>
+<th style="text-align: center;">Necessidade Informacional</th>
+<th style="text-align: center;">Categoria</th>
+<th style="text-align: center;">Entidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">Garantir cumprimento de prazos</td>
+<td style="text-align: center;">Cronograma definido</td>
+<td style="text-align: center;">Atrasos nas entregas</td>
+<td style="text-align: center;">Falta de alinhamento de datas</td>
+<td style="text-align: center;">Percentual de tarefas concluídas no prazo</td>
+<td style="text-align: center;">Calendário e Progresso</td>
+<td style="text-align: center;">Equipe</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">Monitorar evolução do projeto</td>
+<td style="text-align: center;">Marcos do projeto</td>
+<td style="text-align: center;">Mudanças de escopo</td>
+<td style="text-align: center;">Repriorização de tarefas</td>
+<td style="text-align: center;">Variação entre prazo planejado e prazo real</td>
+<td style="text-align: center;">Calendário e Progresso</td>
+<td style="text-align: center;">Equipe</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">Avaliar aderência ao planejamento</td>
+<td style="text-align: center;">Datas de entrega</td>
+<td style="text-align: center;">Sobrecarga de atividades</td>
+<td style="text-align: center;">Falta de comunicação</td>
+<td style="text-align: center;">Número de atividades replanejadas</td>
+<td style="text-align: center;">Calendário e Progresso</td>
+<td style="text-align: center;">Organizacional</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">Medir eficiência do processo</td>
+<td style="text-align: center;">Volume de tarefas</td>
+<td style="text-align: center;">Retrabalho</td>
+<td style="text-align: center;">Falta de padronização</td>
+<td style="text-align: center;">Taxa de retrabalho</td>
+<td style="text-align: center;">Desempenho de Processo</td>
+<td style="text-align: center;">Equipe</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">Acompanhar produtividade</td>
+<td style="text-align: center;">Frequência de entregas</td>
+<td style="text-align: center;">Baixa produtividade</td>
+<td style="text-align: center;">Falta de motivação</td>
+<td style="text-align: center;">Número de tarefas concluídas por período</td>
+<td style="text-align: center;">Desempenho de Processo</td>
+<td style="text-align: center;">Equipe</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">Identificar gargalos</td>
+<td style="text-align: center;">Ciclo de execução</td>
+<td style="text-align: center;">Acúmulo de tarefas</td>
+<td style="text-align: center;">Falta de recursos</td>
+<td style="text-align: center;">Tempo médio de execução por tarefa</td>
+<td style="text-align: center;">Desempenho de Processo</td>
+<td style="text-align: center;">Organizacional</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">Controlar alocação de recursos</td>
+<td style="text-align: center;">Horas disponíveis</td>
+<td style="text-align: center;">Subalocação</td>
+<td style="text-align: center;">Falta de registro de esforço</td>
+<td style="text-align: center;">Horas dedicadas por membro</td>
+<td style="text-align: center;">Recursos e Custos</td>
+<td style="text-align: center;">Equipe</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">Estimar custos do projeto</td>
+<td style="text-align: center;">Orçamento previsto</td>
+<td style="text-align: center;">Estouro de orçamento</td>
+<td style="text-align: center;">Falta de controle financeiro</td>
+<td style="text-align: center;">Custo estimado por entrega</td>
+<td style="text-align: center;">Recursos e Custos</td>
+<td style="text-align: center;">Equipe</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">Avaliar eficiência de uso de recursos</td>
+<td style="text-align: center;">Recursos alocados</td>
+<td style="text-align: center;">Desbalanceamento</td>
+<td style="text-align: center;">Falta de integração de sistemas</td>
+<td style="text-align: center;">Relação entre esforço aplicado e resultado</td>
+<td style="text-align: center;">Recursos e Custos</td>
+<td style="text-align: center;">Organizacional</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">Monitorar carga de trabalho dedicada à documentação</td>
+<td style="text-align: center;">Total de Tarefas de documentação e periodo</td>
+<td style="text-align: center;">Subestimação do esforço</td>
+<td style="text-align: center;">Baixa especificação das entregas documentais</td>
+<td style="text-align: center;">Qual o volume de documentação produzida por tarefa que cumprem aos requisitos especificados?</td>
+<td style="text-align: center;">Recursos e Custos</td>
+<td style="text-align: center;">Equipe</td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">Quantificar entregas em períodos</td>
+<td style="text-align: center;">Períodos definidos</td>
+<td style="text-align: center;">Baixa entrega</td>
+<td style="text-align: center;">Falta de acompanhamento</td>
+<td style="text-align: center;">Total de tarefas finalizadas em determinado período</td>
+<td style="text-align: center;">Calendário e Progresso</td>
+<td style="text-align: center;">Equipe</td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">Avaliar relação de tarefas planejadas, realizadas e pendentes</td>
+<td style="text-align: center;">Monitoramento de aderência ao plano de entrega</td>
+<td style="text-align: center;">Acúmulo de pendências</td>
+<td style="text-align: center;">Gargalo de controle de progresso da entrega</td>
+<td style="text-align: center;">Qual é a taxa de desvio de prazo (slippage) por entrega?</td>
+<td style="text-align: center;">Desempenho de Processo</td>
+<td style="text-align: center;">Organizacional</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>Fonte</em></strong>: autores</p>
+<p>Estas necessidades foram selecionadas com base em sua potencial relevância para a tomada de decisão no contexto do projeto e por sua viabilidade de observação a partir de dados disponíveis em ferramentas de versionamento e colaboração utilizadas pela equipe. Em sequência, prioriza-se três delas, uma para cada categoria de informação, visando aplicá-las no ciclo de medição.</p>
+<ul>
+<li>Priorização</li>
+</ul>
+<p>Para o processo de priorização, por se tratar da primeira rodada e o número de integrantes para a análise ser pequena, será utilizado três características para priorização: facilidade no acesso aos dados requisitados, importância para a equipe e esforço estimado na geração do produto de informação (ex.: tabela, gráfico e outros). Cada uma das características serão atribuidas de 1 a 5, sendo 1 o menor grau daquela característica e 5 maior grau e, ao fim, soma-se as notas das características de importância e facilidade de acesso dos dados e subtrai-se o de esforço. Assim, os que possuirem maior pontuação de cada categoria de informação, serão selecionados. Nesse sentido, segue a <a href="#tab2">Tabela 2</a> abaixo com o resultado das pontuações.</p>
+<h3 id="tab2">Tabela 2: Priorização das Necessidades Informacionais</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Necessidade Informacional</th>
+<th style="text-align: center;">Categoria</th>
+<th style="text-align: center;">Facilidade (1–5)</th>
+<th style="text-align: center;">Esforço (1–5)</th>
+<th style="text-align: center;">Importância (1–5)</th>
+<th style="text-align: center;">Pontuação (Facilidade + Importância - Esforço)</th>
+<th style="text-align: center;">Classificação por Categoria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">11</td>
+<td style="text-align: left;">Quantas tarefas foram finalizadas em determinado período?</td>
+<td style="text-align: center;">Calendário e Progresso</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1 (<strong>Selecionado</strong>)</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Qual o percentual de tarefas concluídas dentro do prazo?</td>
+<td style="text-align: center;">Calendário e Progresso</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Qual foi a variação entre os prazos planejado e real de execução?</td>
+<td style="text-align: center;">Calendário e Progresso</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Quantas atividades precisaram ser replanejadas?</td>
+<td style="text-align: center;">Calendário e Progresso</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td style="text-align: left;">Qual foi a taxa de desvio de prazo (slippage) por entrega?</td>
+<td style="text-align: center;">Desempenho de Processo</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">1 (<strong>Selecionado</strong>)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Quantas tarefas foram concluídas em cada período?</td>
+<td style="text-align: center;">Desempenho de Processo</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Qual é a taxa de retrabalho registrada no projeto?</td>
+<td style="text-align: center;">Desempenho de Processo</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Qual é o tempo médio de execução por tarefa?</td>
+<td style="text-align: center;">Desempenho de Processo</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: left;">Qual é a relação entre o esforço aplicado e os resultados obtidos?</td>
+<td style="text-align: center;">Recursos e Custos</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1 (<strong>Selecionado</strong>)</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">Quantas horas foram dedicadas por cada membro da equipe?</td>
+<td style="text-align: center;">Recursos e Custos</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">Qual o custo estimado por entrega realizada?</td>
+<td style="text-align: center;">Recursos e Custos</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: left;">Qual o volume de documentação produzida por tarefa que cumpre requisitos?</td>
+<td style="text-align: center;">Recursos e Custos</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>Fonte</em></strong>: autores</p>
+<p>Baseado na <a href="#tab2">Tabela 2</a>, chega-se às três necessidades de informação de cada categoria a serem selecionadas para medição. Cada uma foi estimada baseada nos critérios de facilidade de obtenção dos dados, esforço associado e importância dada pela equipe, o que acarretou nas seguintes Necessidades Informacionais (Information Needs):</p>
+<ul>
+<li><strong>Calendário e Progresso</strong>: Quantas tarefas foram finalizadas em determinado período ? (11);</li>
+<li><strong>Desempenho de Processo</strong>: Qual foi a taxa de desvio de prazo (slippage) por entrega ? (12);</li>
+<li><strong>Recurso e Custo</strong>: Qual é a relação entre o esforço aplicado e os resultados obtidos ? (9).</li>
+</ul>
+<h3 id="selecao-de-medidas">Seleção de Medidas</h3>
+<p>Seguindo a base estipulada no capítulo 5.2.3 [<a href="#ref-bib">1</a>, p.13] e o padrão encontrado, tanto no documento do PSM/CID Framework [<a href="#ref-bib">2</a>], as seguintes medidas foram selecionadas para cada necessidade de informação:</p>
+<h3 id="tab3">Tabela 3: <a href="#tab1">Necessidade Informacional 11</a> - Calendário e Progresso</h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Nome da Medida ou Indicador</th>
+<th>Fórmula / Descrição</th>
+<th>Fonte GitHub</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Medida Base</td>
+<td>Data de fechamento das Issues</td>
+<td>Valor extraído de <code>closed_at</code> de cada Issue</td>
+<td>Issues</td>
+</tr>
+<tr>
+<td>Medida Base</td>
+<td>Milestone atribuída</td>
+<td>Data de vencimento vinculada em <code>milestone.due_on</code></td>
+<td>Issues + Milestones</td>
+</tr>
+<tr>
+<td>Medida Derivada</td>
+<td>Quantidade de Issues fechadas por período</td>
+<td><code>Qf = Σ Issues fechadas entre T_início e T_fim</code></td>
+<td>Issues</td>
+</tr>
+<tr>
+<td>Medida Derivada</td>
+<td>Taxa de conclusão da sprint</td>
+<td><code>Tc = (Qf / Qt) × 100</code> onde Qt = total planejado para o ciclo</td>
+<td>Issues + Milestones</td>
+</tr>
+<tr>
+<td>Indicador</td>
+<td>Ritmo de entrega por sprint</td>
+<td>Análise temporal da Taxa de Conclusão</td>
+<td>Painel de acompanhamento</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>Fonte</em></strong>: autores</p>
+<h3 id="tab4">Tabela 4: <a href="#tab1">Necessidade Informacional 12</a> - Desempenho de Processo</h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Nome da Medida ou Indicador</th>
+<th>Fórmula / Descrição</th>
+<th>Fonte GitHub</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Medida Base</td>
+<td>Data de criação e fechamento da Issue</td>
+<td><code>created_at</code> e <code>closed_at</code></td>
+<td>Issues</td>
+</tr>
+<tr>
+<td>Medida Base</td>
+<td>Prazo planejado da entrega</td>
+<td><code>milestone.due_on</code> vinculado à Issue</td>
+<td>Issues + Milestones</td>
+</tr>
+<tr>
+<td>Medida Derivada</td>
+<td>Lead Time por entrega</td>
+<td><code>LT = closed_at - created_at</code></td>
+<td>Issues</td>
+</tr>
+<tr>
+<td>Medida Derivada</td>
+<td>Slippage (desvio de prazo)</td>
+<td><code>S = closed_at - milestone.due_on</code></td>
+<td>Issues + Milestones</td>
+</tr>
+<tr>
+<td>Indicador</td>
+<td>Taxa média de slippage por entrega</td>
+<td><code>Ts = (Σ S_i / N)</code> onde S_i = slippage por Issue i, N = total de entregas avaliadas</td>
+<td>Painel de desempenho</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>Fonte</em></strong>: autores</p>
+<h3 id="tab5">Tabela 5: <a href="#tab1">Necessidade Informacional 9</a> - Recursos e Custos</h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Nome da Medida ou Indicador</th>
+<th>Fórmula / Descrição</th>
+<th>Fonte GitHub</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Medida Base</td>
+<td>Issues atribuídas por colaborador</td>
+<td>Contagem via <code>assignee</code></td>
+<td>Issues</td>
+</tr>
+<tr>
+<td>Medida Base</td>
+<td>Tempo de fechamento por Issue</td>
+<td><code>closed_at - created_at</code></td>
+<td>Issues</td>
+</tr>
+<tr>
+<td>Medida Derivada</td>
+<td>Esforço médio por entrega</td>
+<td><code>Ef = Σ (closed_at - created_at) / Qf</code> onde Qf = Issues concluídas</td>
+<td>Issues</td>
+</tr>
+<tr>
+<td>Medida Derivada</td>
+<td>Esforço total por membro</td>
+<td><code>Em = Σ Effort_issues atribuídas ao membro</code></td>
+<td>Issues atribuídas por membro</td>
+</tr>
+<tr>
+<td>Indicador</td>
+<td>Eficiência de alocação</td>
+<td><code>Ea = (Qt / Em)</code> onde Qt = entregas por membro, Em = esforço total</td>
+<td>Painel de esforço e produtividade</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>Fonte</em></strong>: autores</p>
+<h3 id="definicao-dos-procedimentos-de-coleta-analise-e-reporte">Definição dos Procedimentos de Coleta, Análise e Reporte</h3>
+<p>Conforme especificado no capítulo 5.2.4 da ISO/IEC 15939:2001 [<a href="#ref-bib">1</a>, p.14], esta seção apresenta os procedimentos adotados para coleta, armazenamento, análise e comunicação das medidas selecionadas. O processo utiliza exclusivamente os dados disponibilizados pelo GitHub, com coleta automatizada via script Python mantido por <a href="https://github.com/MVConsorte">Mateus</a>, sem apoio de ferramentas externas como planilhas ou serviços paralelos.</p>
+<h4 id="1-coleta-de-dados">1. Coleta de Dados</h4>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Procedimento Especificado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fontes de dados</td>
+<td>Issues, Pull Requests e Milestones acessados via GitHub API</td>
+</tr>
+<tr>
+<td>Método de coleta</td>
+<td>Script Python que realiza extração automatizada a partir de cada novo commit</td>
+</tr>
+<tr>
+<td>Periodicidade</td>
+<td>Evento de coleta ocorre automaticamente a cada commit registrado no repositório</td>
+</tr>
+<tr>
+<td>Verificação inicial</td>
+<td>Inspeção manual da consistência dos dados por membro designado para garantir integridade</td>
+</tr>
+<tr>
+<td>Responsável pela coleta</td>
+<td><a href="https://github.com/MVConsorte">Mateus</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-armazenamento-e-verificacao">2. Armazenamento e Verificação</h4>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Procedimento Especificado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Repositório de dados</td>
+<td>Arquivos gerados pelo script são mantidos no diretório <code>/data/</code> dentro do GitHub do projeto</td>
+</tr>
+<tr>
+<td>Persistência e rastreabilidade</td>
+<td>Cada entrada inclui identificadores únicos (<code>Issue ID</code>, <code>PR ID</code>, <code>Milestone</code>) e timestamps</td>
+</tr>
+<tr>
+<td>Acesso e permissão</td>
+<td>Arquivos disponíveis para leitura pública via repositório; edições realizadas apenas por script</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-analise-dos-dados">3. Análise dos Dados</h4>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Procedimento Especificado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Funções de medição</td>
+<td>Cálculos diretos em Python para lead time, slippage, esforço médio e eficiência de entrega</td>
+</tr>
+<tr>
+<td>Modelos de interpretação</td>
+<td>Estatística descritiva, médias por ciclo, variações entre metas planejadas e valores reais</td>
+</tr>
+<tr>
+<td>Normalização</td>
+<td>Conversão padronizada de datas em intervalos de tempo (ex: dias corridos, horas úteis)</td>
+</tr>
+<tr>
+<td>Validação</td>
+<td>Verificação automatizada de consistência entre ciclos; alertas para valores fora do padrão histórico</td>
+</tr>
+</tbody>
+</table>
+<h4 id="4-reporte-e-comunicacao">4. Reporte e Comunicação</h4>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Procedimento Especificado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Formato dos produtos</td>
+<td>Exportação automática de relatórios tabulares em arquivos <code>.csv</code>, organizados por sprint</td>
+</tr>
+<tr>
+<td>Frequência de relatório</td>
+<td>Não definido previamente; depende de evento de análise concluída</td>
+</tr>
+<tr>
+<td>Público-alvo</td>
+<td>Equipe de desenvolvimento e professora orientadora</td>
+</tr>
+<tr>
+<td>Canal de comunicação</td>
+<td>Via repositório GitHub e publicação no GitHub Pages do projeto</td>
+</tr>
+<tr>
+<td>Responsável pelo reporte</td>
+<td><a href="https://github.com/MVConsorte">Mateus</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="5-configuracao-e-controle-dos-dados">5. Configuração e Controle dos Dados</h4>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Procedimento Especificado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Versionamento</td>
+<td>Realizado automaticamente via commits no repositório, com histórico e diffs ativados</td>
+</tr>
+<tr>
+<td>Regras de modificação</td>
+<td>Dados processados não são alterados manualmente; qualquer correção exige nova coleta</td>
+</tr>
+<tr>
+<td>Relação entre ciclos</td>
+<td>Cada conjunto de dados é vinculado explicitamente à identificação da Milestone correspondente</td>
+</tr>
+</tbody>
+</table>
+<h3 id="definicao-dos-criterios-de-avaliacao">Definição dos Critérios de Avaliação</h3>
+<p>Conforme estipulado no capítulo 5.2.5 da ISO/IEC 15939:2001 [<a href="#ref-bib">1</a>, p.14], os critérios de avaliação do processo de medição e dos produtos informacionais gerados visam garantir a relevância, confiabilidade e utilidade das medições no apoio à tomada de decisão gerencial. Esta etapa estabelece os padrões mínimos e desejáveis de qualidade para os resultados da medição, considerando aspectos de completude, aplicabilidade, consistência e conformidade com os planos definidos.</p>
+<h4 id="1-avaliacao-dos-produtos-de-informacao">1. Avaliação dos Produtos de Informação</h4>
+<table>
+<thead>
+<tr>
+<th>Critério</th>
+<th>Descrição</th>
+<th>Aplicação ao Projeto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clareza interpretativa</td>
+<td>Os indicadores devem ser facilmente compreendidos pelo público-alvo</td>
+<td>Visualização por gráficos e estrutura de indicadores</td>
+</tr>
+<tr>
+<td>Conformidade com a necessidade</td>
+<td>O indicador deve responder diretamente à necessidade informacional identificada</td>
+<td>Ritmo de entrega, slippage e eficiência por membro</td>
+</tr>
+<tr>
+<td>Aderência aos dados reais</td>
+<td>Os produtos devem refletir fielmente os dados extraídos sem manipulação ou distorção</td>
+<td>Dados extraídos via GitHub API a cada commit</td>
+</tr>
+<tr>
+<td>Capacidade de análise comparativa</td>
+<td>Permitir acompanhamento entre diferentes sprints ou ciclos, destacando tendências e variações</td>
+<td>Análise temporal dos relatórios em <code>.csv</code></td>
+</tr>
+<tr>
+<td>Facilidade de disseminação</td>
+<td>Os resultados devem estar disponíveis em formatos acessíveis e visualmente claros</td>
+<td>Publicação em GitHub Pages e relatórios automatizados</td>
+</tr>
+<tr>
+<td>Confiança do usuário</td>
+<td>O consumidor da informação confia na origem, na análise e nas interpretações apresentadas</td>
+<td>Garantido por rastreabilidade e código aberto dos scripts</td>
+</tr>
+<tr>
+<td>Ajuste ao propósito</td>
+<td>O produto deve ser demonstradamente eficaz na resposta à necessidade informacional específica</td>
+<td>Indicadores alinhados às categorias 11, 12 e 9</td>
+</tr>
+<tr>
+<td>Satisfação das premissas do modelo</td>
+<td>As premissas técnicas (distribuição dos dados, unidades, escalas) devem ser respeitadas</td>
+<td>Validação automatizada por script Python</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-avaliacao-do-processo-de-medicao">2. Avaliação do Processo de Medição</h4>
+<table>
+<thead>
+<tr>
+<th>Critério</th>
+<th>Descrição</th>
+<th>Aplicação ao Projeto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Confiabilidade dos procedimentos</td>
+<td>As tarefas de coleta e análise devem seguir métodos definidos e verificáveis</td>
+<td>Automação com Python e verificação por <a href="https://github.com/MVConsorte">Mateus</a></td>
+</tr>
+<tr>
+<td>Rastreabilidade dos dados</td>
+<td>As medidas devem ser associadas diretamente aos artefatos de origem</td>
+<td>Identificação por Issue ID, Milestone, PR</td>
+</tr>
+<tr>
+<td>Atualização tempestiva</td>
+<td>O processo deve gerar dados e relatórios no momento oportuno para apoiar decisões</td>
+<td>Geração automática a cada novo commit</td>
+</tr>
+<tr>
+<td>Eficiência</td>
+<td>Os recursos aplicados à medição devem ser proporcionais ao valor informacional gerado</td>
+<td>Coleta e processamento integrados ao fluxo do projeto</td>
+</tr>
+<tr>
+<td>Contenção de defeitos</td>
+<td>O processo deve evitar a introdução de erros e tratar rapidamente inconsistências</td>
+<td>Validação manual inicial e logs de exceção</td>
+</tr>
+<tr>
+<td>Satisfação dos usuários</td>
+<td>Os usuários da medição devem considerar os resultados úteis, compreensíveis e aplicáveis</td>
+<td>Reuniões de acompanhamento e aceitação da docente</td>
+</tr>
+<tr>
+<td>Conformidade com o plano</td>
+<td>O processo deve seguir o escopo e procedimentos definidos no planejamento</td>
+<td>Etapas 5.1 e 5.2 implementadas segundo a ISO 15939</td>
+</tr>
+<tr>
+<td>Capacidade de melhoria contínua</td>
+<td>O processo deve permitir ajustes a partir dos aprendizados obtidos</td>
+<td>Revisão por ciclos e refinamento iterativo das métricas</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>Esses critérios formarão a base da validação contínua da prática de medição no projeto, apoiando a confiabilidade dos produtos gerados e a adequação do próprio processo conforme evolui. Eles poderão ser revisados ou adaptados a cada novo ciclo com base em evidências concretas e feedback dos envolvidos.</p>
+<h3 id="verificacao-e-validacao">Verificação e Validação</h3>
+<p>De acordo com o capítulo 5.2.6 da ISO/IEC 15939:2001 [<a href="#ref-bib">1</a>, p.14–15], esta etapa garante que o plano de medição definido seja tecnicamente sólido, operacionalmente viável e sustentado pelas partes interessadas. Trata-se de revisar e aprovar os artefatos definidos nas etapas anteriores, assegurando que os recursos estejam disponíveis e que todos os procedimentos estejam claros e consistentes com as necessidades do projeto.</p>
+<table>
+<thead>
+<tr>
+<th>Ação</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revisão técnica do plano</td>
+<td>Conferência das medidas, fórmulas e procedimentos definidos nas etapas 5.2.2, 5.2.3 e 5.2.4</td>
+<td><a href="https://github.com/MVConsorte">Mateus</a></td>
+</tr>
+<tr>
+<td>Validação com partes interessadas</td>
+<td>Apresentação do plano à professora orientadora para aprovação formal</td>
+<td>Equipe + Docente</td>
+</tr>
+<tr>
+<td>Aprovação do processo</td>
+<td>Registro da aprovação via repositório GitHub, validando o início do ciclo de medição</td>
+<td>Professora responsável</td>
+</tr>
+<tr>
+<td>Verificação da viabilidade</td>
+<td>Confirmação da disponibilidade dos dados via API, execução dos scripts e teste de coleta inicial</td>
+<td><a href="https://github.com/MVConsorte">Mateus</a></td>
+</tr>
+<tr>
+<td>Liberação para execução</td>
+<td>Após a validação técnica e institucional, inicia-se a coleta automática em cada commit</td>
+<td>GitHub + script Python</td>
+</tr>
+</tbody>
+</table>
+<p>Esse processo reforça a confiabilidade do plano e dá início formal à execução da medição conforme previsto.</p>
+<hr />
+<h3 id="aquisicao-e-implementacao-de-tecnologias-de-suporte">Aquisição e Implementação de Tecnologias de Suporte</h3>
+<p>Conforme especificado no capítulo 5.2.7 da ISO/IEC 15939:2001 [<a href="#ref-bib">1</a>, p.15], esta etapa consiste em garantir que as ferramentas e recursos técnicos necessários para a execução do plano estejam disponíveis, adequadamente configurados e integrados às rotinas da equipe. O objetivo é viabilizar a automação e a consistência das atividades de coleta, análise e reporte.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Tecnologia ou Procedimento Implementado</th>
+<th>Estado Atual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Plataforma principal</td>
+<td>GitHub – Repositório central dos dados, Issues, Pull Requests e Milestones</td>
+<td></td>
+</tr>
+<tr>
+<td>Script de medição</td>
+<td>Script em Python – Extrai e processa dados diretamente via API do GitHub</td>
+<td></td>
+</tr>
+<tr>
+<td>Armazenamento dos dados</td>
+<td>Diretório <code>/data/</code> no próprio repositório – persistência local com versionamento</td>
+<td></td>
+</tr>
+<tr>
+<td>Visualização dos resultados</td>
+<td>Exportação de <code>.csv</code> e publicação dos gráficos em página dedicada via GitHub Pages</td>
+<td></td>
+</tr>
+<tr>
+<td>Automação por evento</td>
+<td>Gatilho de execução do script a cada novo commit</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Todas as tecnologias foram implementadas com foco na simplicidade, rastreabilidade e integração direta ao fluxo de trabalho da equipe. Não são utilizadas ferramentas externas (como planilhas ou painéis comerciais), garantindo independência técnica e transparência metodológica.</p>
+<hr />
+<h2 id="ref-bib">Referências</h2>
+<blockquote>
+<p>[1] <a href="../../assets/pdfs/iso-15939.pdf">ISO/IEC. <em>ISO/IEC 15939:2001 – Software engineering — Software measurement process</em>. Geneva: International Organization for Standardization, 2001.</a></p>
+<p>[2] <a href="../../assets/pdfs/psm-cid/psm-cid-part1.pdf">JONES, Cheryl L.; DRAPER, Geoff; GOLAZ, Bill; JANUSZ, Paul. PSM Continuous Iterative Development Measurement Framework – Part 1: Concepts, Definitions, Principles, and Measures. Version 2.1. Practical Software and Systems Measurement; National Defense Industrial Association; International Council on Systems Engineering, 15 abr. 2021.</a></p>
+</blockquote>
+<h2 id="bibliografia">Bibliografia</h2>
+<blockquote>
+<p><a href="../../assets/pdfs/iso-15939.pdf">ISO/IEC. <em>ISO/IEC 15939:2001 – Software engineering — Software measurement process</em>. Geneva: International Organization for Standardization, 2001.</a>.</p>
+<p><a href="../../assets/pdfs/measurement-information-model.pdf">MCGARRY, Francis; CARD, David; JONES, Cheryl L.; et al. Practical Software Measurement: Objective Information for Decision Makers. Capítulo 2 – Measurement Information Model. Versão digital. [S.l.]: Software Engineering Institute (SEI), 2002.</a></p>
+</blockquote>
+<div style="overflow-x:auto">
+
+<table>
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Versão</th>
+      <th>Descrição</th>
+      <th>Autor</th>
+      <th>Revisor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>12/07/2025</td>
+      <td>1.0</td>
+      <td>Criação e elaboração da Página de Planejamento do Processo de Medição.</td>
+      <td><a href="https://github.com/MVConsorte">Mateus</a></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

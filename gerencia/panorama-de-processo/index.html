@@ -1,0 +1,1276 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Mateus Villela & Raissa Andrade">
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../estabelecimento/">
+      
+      
+      <link rel="icon" href="../../assets/imgs/agromart.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Panorama do Processo - Qualidades de Software 1 - Villela & Andrade</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="#387F4A" data-md-color-accent="#F6C94A">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gestao-do-projeto-com-psmcid" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Qualidades de Software 1 - Villela &amp; Andrade" class="md-header__button md-logo" aria-label="Qualidades de Software 1 - Villela & Andrade" data-md-component="logo">
+      
+  <img src="../../assets/imgs/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Qualidades de Software 1 - Villela & Andrade
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Panorama do Processo
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="#387F4A" data-md-color-accent="#F6C94A"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="#A7D0AC" data-md-color-accent="#FFD873"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FCTE-Qualidade-de-Software-1/2025-1-T01-Mateus-Villela-Raissa-Andrade" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    2025-1-T01-Mateus-Villela-Raissa-Andrade
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Visão Geral
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Gerência
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Fase1/" class="md-tabs__link">
+          
+  
+  
+  Fases do Projeto
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Qualidades de Software 1 - Villela &amp; Andrade" class="md-nav__button md-logo" aria-label="Qualidades de Software 1 - Villela & Andrade" data-md-component="logo">
+      
+  <img src="../../assets/imgs/logo.svg" alt="logo">
+
+    </a>
+    Qualidades de Software 1 - Villela & Andrade
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FCTE-Qualidade-de-Software-1/2025-1-T01-Mateus-Villela-Raissa-Andrade" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    2025-1-T01-Mateus-Villela-Raissa-Andrade
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visão Geral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Gerência
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Gerência
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Panorama do Processo
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Panorama do Processo
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencial-teorico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referencial teórico
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Referencial teórico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fig1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Figura 1: Modelo de Processo de medição de software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principais-termos-e-definicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principais Termos e Definições
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metodologia
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metodologia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estrutura-do-processo-de-medicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura do Processo de Medição
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estrutura do Processo de Medição">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fig2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Figura 2: Modelo Informacional de Medição (Measurement Informational Modelo)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicacao-no-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicação no Projeto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#artefatos-e-etapas-do-processo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artefatos e Etapas do Processo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Artefatos e Etapas do Processo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-1-artefatos-do-processo-de-medicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela 1: Artefatos do Processo de Medição
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consideracoes-e-conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerações e Conclusão
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ref-bib" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referencia Bibliográfica
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bibliografia
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabela-de-versionamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela de Versionamento
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estabelecimento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Etapa 1 - Comprometimento com a Medição
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../planejamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Etapa 2 - Planejamento da Medição
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementacao/preambulo.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Etapa 3 - Implementação da Medição
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../avaliacao.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Etapa 4 - Avaliação da Medição
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fases do Projeto
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fases do Projeto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fase1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fase2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fase3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fase4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencial-teorico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referencial teórico
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Referencial teórico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fig1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Figura 1: Modelo de Processo de medição de software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principais-termos-e-definicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principais Termos e Definições
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metodologia
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metodologia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estrutura-do-processo-de-medicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura do Processo de Medição
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estrutura do Processo de Medição">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fig2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Figura 2: Modelo Informacional de Medição (Measurement Informational Modelo)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicacao-no-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicação no Projeto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#artefatos-e-etapas-do-processo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artefatos e Etapas do Processo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Artefatos e Etapas do Processo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-1-artefatos-do-processo-de-medicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela 1: Artefatos do Processo de Medição
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consideracoes-e-conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerações e Conclusão
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ref-bib" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referencia Bibliográfica
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bibliografia
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabela-de-versionamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela de Versionamento
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="gestao-do-projeto-com-psmcid">Gestão do Projeto com PSM/CID</h1>
+<h2 id="introducao">Introdução</h2>
+<p>A gestão de processo é fundamental para garantir a qualidade e o sucesso dos projetos de software. Baseando-se na ISO/IEC 15939 e no princípio do PSM/CID, este documento apresenta a estruturação da gerência de processo, vinculados às práticas e diretrizes para o gerenciamento eficaz da medição de processos, promovendo a melhoria contínua e o alinhamento com os objetivos organizacionais (ou equipe). A motivação para adotar esse padrão internacional reside na necessidade de estabelecer métodos claros e confiáveis para coletar, analisar e utilizar dados, possibilitando decisões informadas e o aprimoramento dos resultados ao longo do ciclo de vida do software. Além disso, essa prática contribui para a coerência e coesão no própria gestão do projeto, além de mensurar o quão eficaz e adequada são as práticas e artefatos de um processo. Assim, essa página se concetra em estabelecer a gerência de processo vinculados ao projeto da disicplina de Qualidade de Software 1 (2025.1).</p>
+<h2 id="objetivos">Objetivos</h2>
+<p><strong>Objetivo Geral</strong>: Documentação e rastreabilidade da Gestão de processo e artefatos associados, visando a aplicação do Processo de medição de software proposto pela ISO/IEC 15939:2001.</p>
+<p><strong>Objetivos Específicos</strong>:</p>
+<ul>
+<li>Execução das etapas do Processo de medição que a gestão do processo.</li>
+<li>Implementação de três produtos de informação com integração ao Git/Github para monitoramento de processo.</li>
+<li>Avaliação dos resultados obtidos.</li>
+</ul>
+<h2 id="referencial-teorico">Referencial teórico</h2>
+<p>O processo de medição, conforme definido na norma ISO/IEC 15939:2001, representa uma metodologia estruturada voltada ao apoio e melhoria contínua da <strong>gestão de processos organizacionais</strong> (<a href="#ref-bib">1</a>, p.7-8). Sua aplicação está centrada na coleta, análise e comunicação de dados que representam tanto os produtos desenvolvidos quanto os processos implementados pela unidade organizacional (<a href="#ref-bib">1</a>, p.7). Ao fazer isso, a medição se torna uma ferramenta gerencial que proporciona <strong>tomada de decisão objetiva, monitoramento de desempenho e avaliação da qualidade</strong>.</p>
+<p>Segundo a norma, o processo de medição é constituído por quatro atividades principais que espelham o ciclo de melhoria contínua PDCA (Plan-Do-Check-Act ou, traduzido, Planejar-Fazer-Checar-Agir) e pode ser visualizado abaixo e em <a href="#fig1">Figura 1</a> ([<a href="#ref-bib">1</a>], p.7, 4.2):</p>
+<ul>
+<li>
+<p><strong>5.1 Estabelecer e sustentar o compromisso de medição</strong><br />
+  Visa garantir envolvimento da alta gestão e alocação de recursos para a execução sustentável da medição.</p>
+</li>
+<li>
+<p><strong>5.2 Planejar o processo de medição</strong><br />
+  Engloba identificar necessidades de informação, selecionar medidas, definir procedimentos e critérios.</p>
+</li>
+<li>
+<p><strong>5.3 Executar o processo de medição</strong><br />
+  Abrange coleta, armazenamento, análise de dados e geração dos produtos de informação.</p>
+</li>
+<li>
+<p><strong>5.4 Avaliar a medição</strong><br />
+  Promove melhoria do processo com base em avaliações de eficácia e repositório de experiências.</p>
+</li>
+</ul>
+<h4 id="fig1"><strong>Figura 1</strong>: Modelo de Processo de medição de software</h4>
+<p><img alt="Modelo de Processo de medição de software" src="../../assets/imgs/imagem-pdca-adaptado.jpeg" /></p>
+<p><strong><em>Fonte</em></strong>: Retirado da ISO/IEC 15939:2001 (<a href="#ref-bib">1</a>, p. 9).</p>
+<p>Essas atividades não são estanques, mas formam um ciclo iterativo de gestão, reforçando o vínculo entre <strong>informação gerencial necessária</strong> e os <strong>produtos de informação</strong> construídos com base em medidas adequadas.</p>
+<h3 id="principais-termos-e-definicoes">Principais Termos e Definições</h3>
+<p>Alguns termos relevantes para o contexto segundo a ISO/IEC 15939:2001 ([<a href="#ref-bib">1</a>], p.1-6):</p>
+<ul>
+<li><strong>atributo</strong>: propriedade ou característica de uma entidade que pode ser distinguida quantitativamente ou qualitativamente por um humano ou automatizações.</li>
+<li><strong>entidade</strong>: objeto que deve ser caracterizado através da medição dos seus atributos.</li>
+<li><strong>Medida Base</strong>: medida definida em termos de um atributo e o método para quantificá-lo (independentes funcionalmente entre si).</li>
+<li><strong>Medida Derivada</strong>: medida que é definida como uma função de dois ou mais valores</li>
+<li><strong>Medida</strong>: variável à qual se atribui valor após operação de medição.</li>
+<li><strong>Indicador</strong>: medida que fornece uma estimativa ou avaliação de atributos específicos derivados de um modelo acerca de necessidades informacionais (Information Needs) definidas.</li>
+<li><strong>Produto Informacional</strong>: conjunto de indicadores e suas interpretações que satisfazem a(s) necessidade(s) informacional(is).</li>
+<li><strong>Necessidade Informacional</strong>: conhecimento necessário para gerir objetivos, riscos e problemas.</li>
+<li><strong>Medição</strong>: conjunto de operações que têm por objetivo determinar o valor de uma medida</li>
+<li><strong>Processo de medição</strong>: conjunto de atividades para estabelecer, planejar, executar e avaliar a medição dentro de um contexto organizacional.</li>
+<li><strong>Modelo</strong>: algoritmo ou cálculo que combina uma ou mais medidas de base e/ou derivadas com critérios de decisão associados.</li>
+<li><strong>Escala</strong>: conjunto ordenado de valores, contínuos ou discretos, ou um conjunto de categorias às quais o atributo é atribuído.</li>
+<li><strong>Unidade de medida</strong>: determinada quantidade, definida e adoptada por convenção, com a qual se comparam outras quantidades do mesmo tipo para exprimir a sua grandeza em relação a essa quantidade.</li>
+<li><strong>Valor</strong>: resultado numérico ou categórico atribuído a uma medida de base, medida derivada ou indicador.</li>
+</ul>
+<p>O processo é estruturado por meio do <strong>Modelo de Informação de Medição</strong>, que conecta diretamente os atributos observáveis dos elementos organizacionais às <strong>necessidades informacionais</strong> dos interessados (gerenciamento, técnica, qualidade). Isso permite uma abordagem sistemática na seleção de métricas e indicadores relevantes, com rastreabilidade desde a origem da necessidade até sua representação quantitativa e analítica.</p>
+<p>Além disso, o processo é compatível com a abordagem CID/PSM, que organiza os artefatos da medição em níveis operacionais e estratégicos, desde o planejamento até a melhoria, reforçando o papel central da medição como parte da engenharia organizacional e da governança de qualidade.</p>
+<h2 id="metodologia">Metodologia</h2>
+<p>Este documento adota como fundamento metodológico o modelo de processo de medição estabelecido pela norma ISO/IEC 15939:2001, com o propósito de planejar, implementar e avaliar a medição de aspectos significativos relacionados ao desempenho da equipe durante o desenvolvimento de atividades no projeto. O principal objetivo é a produção de produtos informacionais e indicadores gerenciais que serão posteriormente disponibilizados por meio de dashboards, de forma a subsidiar a gestão estratégica dos processos organizacionais.</p>
+<h3 id="estrutura-do-processo-de-medicao">Estrutura do Processo de Medição</h3>
+<p>Conforme descrito na norma, o processo de medição é composto por quatro atividades principais, organizadas em ciclos iterativos, baseados na abordagem de melhoria contínua (PDCA) [<a href="#ref-bib">1</a>]:</p>
+<ol>
+<li>
+<p><strong>Estabelecer e sustentar o comprometimento com a medição</strong><br />
+   Consiste na definição do escopo, formalização do comprometimento organizacional e alocação dos recursos necessários para a condução do processo de medição.</p>
+</li>
+<li>
+<p><strong>Planejar o processo de medição</strong><br />
+   Envolve a caracterização da unidade organizacional, identificação e priorização das necessidades de informação, seleção das medidas apropriadas (medidas base, derivadas e indicadores), bem como o estabelecimento dos procedimentos para coleta, armazenamento, análise, apresentação e avaliação dos dados.</p>
+</li>
+<li>
+<p><strong>Executar o processo de medição</strong><br />
+   Inclui a integração dos procedimentos definidos aos processos operacionais, coleta sistemática dos dados contextuais e verificados, análise quantitativa dos dados obtidos, e elaboração dos produtos informacionais.</p>
+</li>
+<li>
+<p><strong>Avaliar a medição</strong><br />
+   Refere-se à verificação da qualidade e relevância dos produtos de informação e à atualização da base de experiência da medição (<em>Measurement Experience Base</em>), identificando oportunidades de melhoria para ciclos subsequentes.</p>
+</li>
+</ol>
+<p>Aliado a isso, apresenta-se o Modelo Informacional de Medição, o qual mostra o conceito mensurável que parte desde a relação das necessidades informacionais até as entidades visto na <a href="#fig2">Figura 2</a> abaixo.</p>
+<h4 id="fig2"><strong>Figura 2</strong>: Modelo Informacional de Medição (Measurement Informational Modelo)</h4>
+<p><img alt="Modelo de Processo de medição de software" src="../../assets/imgs/modelo-informacional-de-medicao.jpeg" /></p>
+<p><strong><em>Fonte</em></strong>: Retirado da ISO/IEC 15939:2001 [<a href="#ref-bib">1</a>, p. 20, Anexo A.1].</p>
+<p>O modelo informacional de medição da ISO/IEC 15939:2001 estrutura-se como um sistema conceitual que conecta entidades observáveis — como processos, produtos ou projetos — a necessidades de informação gerencial por meio de atributos mensuráveis [<a href="#ref-bib">1</a>, p.21]. A partir desses atributos, definem-se medidas base (quantificações diretas), que podem ser combinadas em medidas derivadas por meio de funções de medição, e por fim modeladas em indicadores, os quais agregam valor analítico ao atender demandas específicas de decisão [<a href="#ref-bib">1</a>, p.21-22]. A complexidade e o grau de abstração da informação aumentam à medida que se avança das medidas base para os indicadores, aproximando-se das necessidades informacionais [<a href="#ref-bib">1</a>, p.23].</p>
+<p>Esses indicadores são produzidos por modelos que agregam medidas e aplicam critérios de decisão — como limites, metas ou padrões — e são expressos em escalas que variam de nominal a razão, conforme a natureza dos atributos [<a href="#ref-bib">1</a>, p.21-22]. A aplicação prática do modelo exige que as medidas sejam concebidas com clareza metodológica, associadas a unidades convencionais de comparação e interpretadas à luz dos conceitos mensuráveis que expressam dimensões como desempenho, qualidade, risco ou produtividade. Assim, o modelo sustenta um processo iterativo de geração de conhecimento quantificável, confiável e acionável dentro da engenharia e gestão organizacional.</p>
+<h3 id="aplicacao-no-projeto">Aplicação no Projeto</h3>
+<p>A metodologia será aplicada durante a execução das atividades da equipe, com foco em atributos como produtividade, qualidade técnica, eficiência de comunicação e entrega de valor. As necessidades de informação serão definidas em conjunto com os interessados e convertidas em medidas observáveis, conforme os modelos previstos na norma [<a href="#ref-bib">1</a>].</p>
+<p>Os dados serão extraídos dos fluxos operacionais do projeto (tais como sistemas de versionamento, gerenciamento de tarefas e produção de artefatos), e transformados em indicadores analíticos, como, por exemplo, tempo de ciclo, volume de entregas, taxa de retrabalho e grau de colaboração.</p>
+<p>Esses indicadores serão apresentados em gráficos, podendo estar em painéis de visualização de dados (dashboards) ou outros mecanismos de integração com a plataforma Git/Github, permitindo acompanhamento contínuo da evolução do processo, análise de desempenho da equipe e suporte à tomada de decisão baseada em evidências quantitativas.</p>
+<h2 id="artefatos-e-etapas-do-processo">Artefatos e Etapas do Processo</h2>
+<h4 id="tabela-1-artefatos-do-processo-de-medicao"><strong>Tabela 1: Artefatos do Processo de Medição</strong></h4>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Artefato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="../estabelecimento/">Etapa 1: Estabelecimento e Comprometimento</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="../planejamento/">Etapa 2: Planejamento do Processo de medição</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="../gerencia/implementacao/preambulo.md">Etapa 3: Implementação do Processo de medição</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="../gerencia/avaliacao.md">Etapa 4: Avaliação do Processo de medição</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>Fonte</em></strong>: autores.</p>
+<h2 id="consideracoes-e-conclusao">Considerações e Conclusão</h2>
+<h2 id="ref-bib">Referencia Bibliográfica</h2>
+<blockquote>
+<p>[1] <a href="../../assets/pdfs/iso-15939.pdf">ISO/IEC. <em>ISO/IEC 15939:2001 – Software engineering — Software measurement process</em>. Geneva: International Organization for Standardization, 2001.</a>.</p>
+</blockquote>
+<h2 id="bibliografia">Bibliografia</h2>
+<blockquote>
+<p><a href="../../assets/pdfs/iso-15939.pdf">ISO/IEC. <em>ISO/IEC 15939:2001 – Software engineering — Software measurement process</em>. Geneva: International Organization for Standardization, 2001.</a>.</p>
+<p><a href="../../assets/pdfs/measurement-information-model.pdf">MCGARRY, Francis; CARD, David; JONES, Cheryl L.; et al. Practical Software Measurement: Objective Information for Decision Makers. Capítulo 2 – Measurement Information Model. Versão digital. [S.l.]: Software Engineering Institute (SEI), 2002.</a></p>
+</blockquote>
+<h2 id="tabela-de-versionamento">Tabela de Versionamento</h2>
+<div style="overflow-x:auto">
+
+<table>
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Versão</th>
+      <th>Descrição</th>
+      <th>Autor</th>
+      <th>Revisor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>11/07/2025</td>
+      <td>1.0</td>
+      <td>Criação da Página principal de Gestão de Processo com as seções definidas e feito a Introdução e Objetivo.</td>
+      <td><a href="https://github.com/MVConsorte">Mateus</a></td>
+      <td><a href="https://github.com/RaissaAndradeS">Raissa</a></td>
+    </tr>
+    <tr>
+      <td>11/07/2025</td>
+      <td>1.1</td>
+      <td>Adição do Referencial teórico.</td>
+      <td><a href="https://github.com/MVConsorte">Mateus</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>12/07/2025</td>
+      <td>1.2</td>
+      <td>Adição da metodologia e tabela de artefatos com hiperlinks.</td>
+      <td><a href="https://github.com/MVConsorte">Mateus</a></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
