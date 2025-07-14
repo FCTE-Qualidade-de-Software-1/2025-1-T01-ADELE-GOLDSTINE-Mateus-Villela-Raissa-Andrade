@@ -1,0 +1,242 @@
+name: 'Análise de Métricas - Execução Automática'
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    types: [ closed ]
+
+jobs:
+  run-metrics-scripts:
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+      issues: read
+      pull-requests: read
+    
+    steps:
+    - name: 📥 Checkout do repositório
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: 🐍 Configurar Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+    
+    - name: 📦 Instalar dependências
+      run: |
+        python -m pip install --upgrade pip
+        pip install PyGithub plotly kaleido numpy pandas
+        
+        # Verificar se existe requirements.txt e instalar
+        if [ -f requirements.txt ]; then
+          pip install -r requirements.txt
+        fi
+        
+        # Listar dependências instaladas
+        pip list
+    
+    - name: 📁 Verificar estrutura de diretórios
+      run: |
+        echo "📂 Estrutura atual do repositório:"
+        find . -type f -name "*.py" | head -20
+        
+        echo "📂 Conteúdo da pasta scripts:"
+        if [ -d "scripts" ]; then
+          ls -la scripts/
+        else
+          echo "❌ Pasta 'scripts' não encontrada!"
+          exit 1
+        fi
+    
+    - name: 🔍 Descobrir scripts Python
+      id: find-scripts
+      run: |
+        echo "🔍 Procurando scripts Python na pasta /scripts/..."
+        
+        if [ ! -d "scripts" ]; then
+          echo "❌ Diretório 'scripts' não existe!"
+          exit 1
+        fi
+        
+        # Encontrar todos os arquivos .py na pasta scripts
+        scripts=$(find scripts/ -name "*.py" -type f | sort)
+        
+        if [ -z "$scripts" ]; then
+          echo "❌ Nenhum script Python encontrado na pasta 'scripts'!"
+          exit 1
+        fi
+        
+        echo "📜 Scripts encontrados:"
+        echo "$scripts"
+        
+        # Salvar lista de scripts para uso posterior
+        echo "$scripts" > scripts_list.txt
+        
+        # Contar scripts
+        script_count=$(echo "$scripts" | wc -l)
+        echo "📊 Total de scripts encontrados: $script_count"
+        
+        echo "scripts_found=$script_count" >> $GITHUB_OUTPUT
+    
+    - name: 🚀 Executar scripts de métricas
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        REPO_OWNER: ${{ github.repository_owner }}
+        REPO_NAME: ${{ github.event.repository.name }}
+      run: |
+        echo "🚀 Iniciando execução dos scripts de métricas..."
+        echo "📍 Repositório: $REPO_OWNER/$REPO_NAME"
+        echo "🔑 Token configurado: $([ -n "$GH_TOKEN" ] && echo "✅ Sim" || echo "❌ Não")"
+        
+        # Criar diretórios necessários
+        mkdir -p data/desempenho-processo
+        mkdir -p data/recurso-custo
+        mkdir -p docs/assets/imgs/graficos/historico/grafico-desempenho-processo
+        mkdir -p docs/assets/imgs/graficos/historico/grafico-recurso-custo
+        mkdir -p docs/assets/imgs/graficos
+        
+        # Contador de sucessos e falhas
+        success_count=0
+        error_count=0
+        
+        # Ler lista de scripts
+        while IFS= read -r script; do
+          if [ -f "$script" ]; then
+            echo ""
+            echo "🔄 Executando: $script"
+            echo "⏰ Horário: $(date '+%Y-%m-%d %H:%M:%S')"
+            echo "----------------------------------------"
+            
+            # Executar script e capturar saída
+            if timeout 300 python "$script"; then
+              echo "✅ $script executado com sucesso!"
+              ((success_count++))
+            else
+              echo "❌ Erro ao executar $script"
+              echo "🔍 Verificando se o arquivo existe: $([ -f "$script" ] && echo "Sim" || echo "Não")"
+              ((error_count++))
+            fi
+            
+            echo "----------------------------------------"
+          else
+            echo "⚠️  Script não encontrado: $script"
+            ((error_count++))
+          fi
+        done < scripts_list.txt
+        
+        echo ""
+        echo "📊 RESUMO DA EXECUÇÃO:"
+        echo "✅ Scripts executados com sucesso: $success_count"
+        echo "❌ Scripts com erro: $error_count"
+        echo "📈 Total processado: $((success_count + error_count))"
+        
+        # Verificar se algum arquivo foi gerado
+        echo ""
+        echo "📁 Arquivos gerados:"
+        find data/ -name "*.csv" -type f 2>/dev/null | head -10 || echo "Nenhum CSV encontrado"
+        find docs/assets/imgs/graficos/ -name "*.png" -type f 2>/dev/null | head -10 || echo "Nenhum gráfico encontrado"
+    
+    - name: 📊 Verificar arquivos gerados
+      run: |
+        echo "📊 Verificando arquivos gerados..."
+        
+        echo "📈 CSVs gerados:"
+        find data/ -name "*.csv" -type f -exec ls -lh {} \; 2>/dev/null || echo "Nenhum CSV encontrado"
+        
+        echo ""
+        echo "🖼️  Gráficos gerados:"
+        find docs/assets/imgs/graficos/ -name "*.png" -type f -exec ls -lh {} \; 2>/dev/null || echo "Nenhum gráfico encontrado"
+        
+        echo ""
+        echo "📁 Estrutura de diretórios criada:"
+        tree data/ docs/assets/imgs/graficos/ 2>/dev/null || find data/ docs/assets/imgs/graficos/ -type d 2>/dev/null || echo "Diretórios não encontrados"
+    
+    - name: 💾 Commit e push dos arquivos gerados
+      run: |
+        echo "💾 Configurando Git..."
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action - Métricas"
+        
+        echo "📝 Verificando mudanças..."
+        git status
+        
+        # Adicionar apenas arquivos de dados e gráficos
+        git add data/ docs/assets/imgs/graficos/ 2>/dev/null || true
+        
+        # Verificar se há mudanças para commit
+        if git diff --staged --quiet; then
+          echo "ℹ️  Nenhuma mudança detectada nos arquivos de métricas."
+        else
+          echo "💾 Fazendo commit das métricas atualizadas..."
+          
+          # Criar mensagem de commit detalhada
+          timestamp=$(date '+%Y-%m-%d %H:%M:%S')
+          commit_msg="🤖 Atualização automática de métricas - $timestamp
+
+          📊 Métricas geradas automaticamente via GitHub Actions
+          🔄 Trigger: Merge na branch main
+          ⏰ Executado em: $timestamp
+          🏷️  Commit: ${{ github.sha }}
+          
+          Arquivos atualizados:
+          $(git diff --staged --name-only | sed 's/^/- /')"
+          
+          git commit -m "$commit_msg"
+          
+          echo "🚀 Fazendo push das alterações..."
+          git push
+          
+          echo "✅ Métricas atualizadas e commitadas com sucesso!"
+        fi
+    
+    - name: 📋 Resumo da execução
+      if: always()
+      run: |
+        echo ""
+        echo "🎯 RESUMO FINAL DA EXECUÇÃO"
+        echo "=========================="
+        echo "📅 Data/Hora: $(date '+%Y-%m-%d %H:%M:%S')"
+        echo "🔄 Trigger: ${{ github.event_name }}"
+        echo "🌿 Branch: ${{ github.ref_name }}"
+        echo "👤 Autor: ${{ github.actor }}"
+        echo "📝 Commit: ${{ github.sha }}"
+        echo ""
+        
+        # Status dos arquivos
+        csv_count=$(find data/ -name "*.csv" -type f 2>/dev/null | wc -l)
+        png_count=$(find docs/assets/imgs/graficos/ -name "*.png" -type f 2>/dev/null | wc -l)
+        
+        echo "📊 Arquivos gerados:"
+        echo "   📈 CSVs: $csv_count"
+        echo "   🖼️  Gráficos: $png_count"
+        echo ""
+        
+        if [ "$csv_count" -gt 0 ] || [ "$png_count" -gt 0 ]; then
+          echo "✅ Execução concluída com sucesso!"
+        else
+          echo "⚠️  Execução concluída, mas poucos arquivos foram gerados."
+        fi
+        
+        echo "=========================="
+
+    - name: 🔔 Notificação de erro
+      if: failure()
+      run: |
+        echo "❌ FALHA NA EXECUÇÃO DOS SCRIPTS"
+        echo "================================"
+        echo "Verifique os logs acima para identificar o problema."
+        echo "Possíveis causas:"
+        echo "- Erro de autenticação com GitHub API"
+        echo "- Script com erro de sintaxe"
+        echo "- Dependências faltando"
+        echo "- Timeout na execução"
+        echo "================================"
