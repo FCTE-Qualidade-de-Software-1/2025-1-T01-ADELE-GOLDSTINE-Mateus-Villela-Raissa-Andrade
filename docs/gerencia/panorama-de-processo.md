@@ -111,7 +111,7 @@ Esses indicadores serão apresentados em gráficos, podendo estar em painéis de
 |-----|-------------------------|
 | 1   | [Etapa 1: Estabelecimento e Comprometimento](../gerencia/estabelecimento.md)    |   
 | 2   | [Etapa 2: Planejamento do Processo de medição](../gerencia/planejamento.md)    |   
-| 3   | [Etapa 3: Implementação do Processo de medição](../gerencia/implementacao/preambulo.md)      |  
+| 3   | [Etapa 3: Implementação do Processo de medição](../gerencia/implementacao.md)      |  
 | 4   | [Etapa 4: Avaliação do Processo de medição](../gerencia/avaliacao.md) | 
 
 **_Fonte_**: autores.
@@ -153,14 +153,14 @@ Esses indicadores serão apresentados em gráficos, podendo estar em painéis de
       <td>1.1</td>
       <td>Adição do Referencial teórico.</td>
       <td><a href="https://github.com/MVConsorte">Mateus</a></td>
-      <td></td>
+      <td><a href="https://github.com/RaissaAndradeS">Raissa</a></td>
     </tr>
     <tr>
       <td>12/07/2025</td>
       <td>1.2</td>
       <td>Adição da metodologia e tabela de artefatos com hiperlinks.</td>
       <td><a href="https://github.com/MVConsorte">Mateus</a></td>
-      <td></td>
+      <td><a href="https://github.com/RaissaAndradeS">Raissa</a></td>
     </tr>
   </tbody>
 </table>
