@@ -1,0 +1,21 @@
+Issue Nº,Título,Sprint (Milestone),Data Criação,Data Fechamento,Prazo Planejado,Lead Time (dias),Slippage (dias)
+27,Panorama Geral da Gerência,Ponto de Controle 1,2025-07-12,2025-07-12,2025-07-12,0,0
+26,Executar ação de melhoria no projeto,Entrega Final,2025-07-12,2025-07-13,2025-07-14,1,-1
+25,Identificar oportunidades de melhoria a partir da avaliação,Entrega Final,2025-07-12,2025-07-13,2025-07-14,1,-1
+24,Entrega da fase 3,Ponto de Controle 1,2025-07-12,2025-07-12,2025-07-12,0,0
+23,Projeto da Avaliação – Fase 3: Compreensibilidade,Planejamento,2025-07-12,2025-07-12,2025-07-10,0,1
+22,Entrega da Fase 2,Ponto de Controle 1,2025-07-11,2025-07-12,2025-07-12,0,0
+19,Planejamento de Processo de medição,Ponto de Controle 1,2025-07-11,2025-07-13,2025-07-12,1,1
+18,Estabelecimento e comprometimento com a medição  de processo,Ponto de Controle 1,2025-07-11,2025-07-12,2025-07-12,0,0
+17,Referencial Teórico,Ponto de Controle 1,2025-07-11,2025-07-12,2025-07-12,0,-1
+16,Estruturação da página principal da Gerência de Processo,Ponto de Controle 1,2025-07-11,2025-07-12,2025-07-12,0,-1
+13,Verificação do artefato da Fase 1.,Ponto de Controle 1,2025-07-11,2025-07-12,2025-07-12,0,-1
+9,Estabelecer os requisitos de avaliação,Ponto de Controle 1,2025-07-11,2025-07-11,2025-07-12,0,-1
+8,Definir Metas para as Métricas,Ponto de Controle 1,2025-07-11,2025-07-11,2025-07-12,0,-1
+7,Formular Hipóteses para cada Questão,Ponto de Controle 1,2025-07-11,2025-07-11,2025-07-12,0,-1
+6,Formular Questões da Avaliação,Ponto de Controle 1,2025-07-11,2025-07-11,2025-07-12,0,-1
+5,Criar Abstraction Sheet,Ponto de Controle 1,2025-07-11,2025-07-12,2025-07-12,1,0
+4,Criar Objetivo de Medição,Planejamento,2025-07-11,2025-07-11,2025-07-10,0,1
+3,Adição da página de Visão Geral,Planejamento,2025-07-10,2025-07-10,2025-07-10,0,0
+2,Automatizar Deploy da Documentação (MkDocs) no GitHub Pages,Planejamento,2025-07-10,2025-07-10,2025-07-10,0,0
+1,Implementar Estrutura de Documentação com MkDocs,Planejamento,2025-07-10,2025-07-10,2025-07-10,0,0

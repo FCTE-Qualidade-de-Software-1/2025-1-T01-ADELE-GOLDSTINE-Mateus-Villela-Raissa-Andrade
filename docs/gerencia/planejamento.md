@@ -260,7 +260,7 @@ Todas as tecnologias foram implementadas com foco na simplicidade, rastreabilida
       <td>1.0</td>
       <td>Criação e elaboração da Página de Planejamento do Processo de Medição.</td>
       <td><a href="https://github.com/MVConsorte">Mateus</a></td>
-      <td></td>
+      <td><a href="https://github.com/RaissaAndradeS">Raissa</a></td>
     </tr>
   </tbody>
 </table>
